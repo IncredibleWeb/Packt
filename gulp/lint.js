@@ -4,6 +4,7 @@ import gulp from 'gulp';
 import cache from 'gulp-cached';
 import eslint from 'gulp-eslint';
 import sassLint from 'gulp-sass-lint';
+import gutil from 'gulp-util';
 
 // lint all the things!
 gulp.task('lint', ['lint_js', 'lint_sass']);
@@ -12,7 +13,9 @@ gulp.task('lint', ['lint_js', 'lint_sass']);
 gulp.task('lint_js', () => {
     return gulp.src(global.paths.js)
         .pipe(cache('lint_js'))
-        .pipe(eslint())
+        .pipe(eslint().on('error', function(error) {
+            gutil.log(error.toString());
+        }))
         .pipe(eslint.format());
 });
 
@@ -20,6 +23,8 @@ gulp.task('lint_js', () => {
 gulp.task('lint_sass', () => {
     return gulp.src(global.paths.sass)
         .pipe(cache('lint_sass'))
-        .pipe(sassLint())
+        .pipe(sassLint().on('error', function(error) {
+            gutil.log(error.toString());
+        }))
         .pipe(sassLint.format());
 });

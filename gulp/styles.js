@@ -6,7 +6,6 @@ import concat from 'gulp-concat';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import cssNano from 'gulp-cssnano';
-import rename from 'gulp-rename';
 import gutil from 'gulp-util';
 import livereload from 'gulp-livereload';
 
@@ -33,8 +32,5 @@ gulp.task('sass_dist', () => {
         })
         .pipe(autoprefixer())
         .pipe(cssNano())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest(global.paths.dist));
+        .pipe(gulp.dest(`${global.paths.dist}/css`));
 });

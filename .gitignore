@@ -3,3 +3,7 @@ dist/
 css/
 *.log
 .sass-cache/
+src/script.js
+src/script.js.map
+server-dist/
+/app.js

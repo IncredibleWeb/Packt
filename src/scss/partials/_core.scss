@@ -1,0 +1,52 @@
+html {
+    background-color: $background-color;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    position: relative;
+}
+
+body,
+select,
+input,
+textarea {
+    color: $font-color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    font-size: $font-size;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    box-shadow: $box-shadow-menu;
+    top: -3.5em;
+    left: 0;
+    right: 0;
+    height: 7em;
+    z-index: 1;
+    position: fixed;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    background-color: $theme-color1;
+}
+
+.header-wrapper {
+    height: 3.5em;
+    left: 3.5em;
+    right: 3.5em;
+    top: 0;
+    padding-top: 3.5em;
+    z-index: 2;
+    position: fixed;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    .title {
+        color: $theme-color3;
+        font-weight: 400;
+        font-size: 1.25em;
+        line-height: 2.8em;
+    }
+}
+
