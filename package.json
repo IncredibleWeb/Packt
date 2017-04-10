@@ -53,8 +53,8 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "builddev": "babel server -d server-dist && babel app.babel.js --out-file app.js && gulp build_dev",
-    "build": "babel server -d server-dist && babel app.babel.js --out-file app.js && gulp build",
+    "builddev": "gulp build_dev",
+    "build": "gulp build",
     "startdev": "node app.js /src",
     "start": "node app.js"
   }

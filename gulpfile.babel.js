@@ -21,7 +21,9 @@ global.paths = {
     // distribution folder
     'dist': './dist',
     // distribution folder
-    'serverDist': './server-dist'
+    'serverDist': './server-dist',
+    // files to be copied to dest folder
+    'srcCopy': ['./src/api/**/*']
 };
 
 requireDir('./gulp', { recurse: false });

@@ -11,7 +11,7 @@ import rename from 'gulp-rename';
 import gutil from 'gulp-util';
 
 gulp.task('build', (done) => {
-    return runSeq('clean', ['build_sass', 'build_img', 'build_js'], 'compile', done);
+    return runSeq('clean', ['build_sass', 'build_img', 'build_js'], 'compile', 'copy', done);
 });
 
 gulp.task('build_dev', (done) => {
@@ -55,6 +55,12 @@ gulp.task('build_html', () => {
                 gutil.log(error.toString());
             }))
         .pipe(gulp.dest(global.paths.serverDist));
+});
+
+// copy files from src to dist
+gulp.task('copy', () => {
+    return gulp.src(global.paths.srcCopy, { base: './src/' })
+        .pipe(gulp.dest(global.paths.dist));
 });
 
 // build images for distribution

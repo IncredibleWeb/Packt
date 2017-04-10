@@ -17,7 +17,7 @@ export default class {
 
             request.onerror = () => {
                 // network errors
-                reject(Error("Network Error"));
+                reject(Error('Network Error'));
             };
 
             request.send();
