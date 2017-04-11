@@ -52,6 +52,14 @@
                 padding: 1em 0 1em 2.5em;
             }
         }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                padding: 0;
+            }
+        }
         a {
             border-left: 2px solid transparent;
             color: lighten($font-color, 10%);

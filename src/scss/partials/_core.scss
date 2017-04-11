@@ -19,6 +19,10 @@ textarea {
     -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 header {
     box-shadow: $box-shadow-menu;
     top: -3.5em;
@@ -47,6 +51,7 @@ header {
         font-weight: 400;
         font-size: 1.25em;
         line-height: 2.8em;
+        margin: 0;
     }
 }
 
