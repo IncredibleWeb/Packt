@@ -1,4 +1,14 @@
 {
-    "title": "Lorem Ipsum",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quia rem vel vitae corrupti, sequi placeat rerum aliquid laudantium corporis!"
+    "hiit": {
+        "title": "HIIT",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quia rem vel vitae corrupti, sequi placeat rerum aliquid laudantium corporis!"
+    },
+    "challenge": {
+        "title": "Challenge",
+        "description": "Elit. Nam quia rem vel vitae corrupti, sequi placeat rerum aliquid laudantium corporis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quia rem vel vitae corrupti."
+    },
+    "settings": {
+        "title": "Settings",
+        "description": "Placeat rerum aliquid laudantium corporis! Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    }
 }

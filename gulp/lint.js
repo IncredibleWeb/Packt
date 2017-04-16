@@ -21,7 +21,7 @@ gulp.task('lint_js', () => {
 
 // lint SASS
 gulp.task('lint_sass', () => {
-    return gulp.src(global.paths.sass)
+    return gulp.src([global.paths.sass, `!${global.paths.vendorSass}`])
         .pipe(cache('lint_sass'))
         .pipe(sassLint().on('error', function(error) {
             gutil.log(error.toString());

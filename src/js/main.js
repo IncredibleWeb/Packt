@@ -6,9 +6,10 @@ let api = new Api();
 
 if (document.getElementById('main')) {
     let main = document.getElementById('main');
-    if (main.getAttribute('data-get')) {
+    let key = main.getAttribute('data-get');
+    if (key) {
         // simulate a call to the API
-        api.get().then(function(response) {
+        api.get(key).then(function(response) {
             // create the element and update the UI
             let itemElement = document.createElement('div');
             itemElement.classList.add('item');

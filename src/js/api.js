@@ -1,5 +1,5 @@
 export default class {
-    get() {
+    get(key) {
         return new Promise(function(resolve, reject) {
             let request = new XMLHttpRequest();
             request.open('GET', './api/mock.json');
@@ -8,7 +8,7 @@ export default class {
                 // success
                 if (request.status === 200) {
                     // resolve the promise with the parsed response text (assumes JSON)
-                    resolve(JSON.parse(request.response));
+                    resolve(JSON.parse(request.response)[key]);
                 } else {
                     // error retrieving file
                     reject(Error(request.statusText));
