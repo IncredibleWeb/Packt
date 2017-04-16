@@ -1,0 +1,34 @@
+<nav class="nav-menu checkbox">
+    <div class="hamburger">
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" onclick="">
+            Toggle Menu
+        </label>
+        <div class="side-nav">
+            <div class="nav-header">
+                <span class="username">Kevin Farrugia</span>
+            </div>
+            <div class="nav-body">
+                <div class="section recent">
+                    <span class="section-header">Recent</span>
+                    <ul class="recent-list inner-section">
+                        <li>
+                            <a href="/" alt="HIIT">HIIT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section pages">
+                    <ul class="page-list">
+                        {{#each data.navMenu }}
+                            <li>
+                                <a href="{{ url }}" title="{{ title }}" class="{{#if isActive}}selected{{/if}}">
+                                    <i class="icon"><img src="{{ icon }}" alt="{{ title }}" /></i>{{ title }}
+                                </a>
+                            </li>
+                        {{/each }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
