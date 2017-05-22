@@ -14,7 +14,8 @@ const b = browserify({
     entries: `${global.paths.src}/js/main.js`,
     debug: true,
     transform: [babelify.configure({
-        presets: ['es2015']
+        presets: ['es2015'],
+        sourceMaps: true
     })]
 });
 
@@ -26,7 +27,7 @@ gulp.task('scripts', () => {
         })
         .pipe(source(`${global.paths.src}/js/main.js`))
         .pipe(buffer())
-        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(concat('script.js'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(global.paths.src));
